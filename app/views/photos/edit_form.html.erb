@@ -1,0 +1,29 @@
+<div class="container">
+
+  <form action="http://localhost:3000/update_photo/<%= @photo.id %>">
+
+    <h1>
+      Edit Image
+    </h1>
+
+    <div>
+      <label for="source_input">
+        Image URL
+      </label>
+
+      <input id="source_input" value="<%= @photo.source %>" name="the_source">
+    </div>
+
+    <div>
+      <label for="caption_input">
+        Caption
+      </label>
+
+      <input id="caption_input" value="<%= @photo.caption %>" name="the_caption">
+    </div>
+
+    <button>
+      Update Photo
+    </button>
+  </form>
+</div>

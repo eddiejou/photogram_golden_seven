@@ -1,0 +1,38 @@
+<div class="container">
+
+  <div class="col-md-6">
+
+
+    <h1>
+      All Photos
+    </h1>
+
+    <a href="/photos/new">
+      Add a new photo
+    </a>
+
+    <% @list_of_photos.each do |photo| %>
+    <div class="thumbnail">
+
+      <img src="<%= photo.source %>">
+
+
+      <div class="caption">
+        <a href="http://localhost:3000/photos/<%= photo.id %>" class="btn btn-default btn-block">
+          Detail
+        </a>
+
+        <a href="http://localhost:3000/photos/<%= photo.id %>/edit" class="btn btn-default btn-block">
+          Edit
+        </a>
+
+        <a href="http://localhost:3000/delete_photo/<%= photo.id %>" class="btn btn-default btn-block">
+          <!--<%= link_to "Delete", "http://localhost:3000/delete_photo/#{photo.id}", :data => { :confirm => "Are you sure you want to kill this photo?" } %>-->
+          Delete
+        </a>
+
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
